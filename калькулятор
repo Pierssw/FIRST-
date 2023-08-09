@@ -31,3 +31,19 @@ class MyClient(discord.Client):
 
 client = MyClient(intents=discord.Intents.default())
 client.run('token')
+
+
+
+# THIS IS THE TEAM "help" FOR THIS BOT:
+
+from tkinter import BOTH
+
+import discord
+
+
+@BOTH.command()
+async def help(ctx):
+    embed_help = discord.Embed(title="Помощь:anchor:", description="**Краткий обзор**", color=0xc700c7)
+    embed_help.add_field(name="Модули (.help modules)", value="Доступные модули", inline=False)
+    embed_help.add_field(name="Справка", value="Узнать о боте — команда .about")
+    await ctx.send(embed = embed_help)
